@@ -5,25 +5,14 @@ import math
 # ============================================================
 # MODELO DE VALIDACIÓN MDVRP - INSTANCIA CORDEAU P02
 # ============================================================
-# Este archivo es una versión simplificada del modelo exacto original.
 #
 # Objetivo:
 #   Validar la parte estructural del modelo exacto:
 #   - asignación única de clientes/orders,
 #   - secuenciación,
 #   - restricciones de capacidad,
-#   - eliminación de subtours,
+#   - eliminación de subciclos,
 #   - cálculo de costes entre nodos.
-#
-# Diferencias respecto al modelo industrial original:
-#   - No se usan SETUP_IN ni SETUP_OUT.
-#   - El coste entre nodos se calcula como distancia euclídea.
-#   - Se incluye el retorno final al depósito, por lo que se valida
-#     como un MDVRP cerrado clásico.
-#   - No se ejecuta ALNS.
-#
-# Input esperado:
-#   Instancia Cordeau MDVRP en formato texto, por ejemplo p02.txt.
 # ============================================================
 
 
@@ -35,7 +24,6 @@ INPUT_FILE = "p02.txt"
 OUTPUT_FILE = "output_validacion_p02.txt"
 
 # Se deja la instancia completa.
-# Si en algún momento se quisiera probar una subinstancia, poner por ejemplo 20.
 MAX_CLIENTES = None
 
 # Límite máximo de resolución: 4 horas = 14.400 segundos.
