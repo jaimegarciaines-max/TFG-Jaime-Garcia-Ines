@@ -16,20 +16,6 @@ El problema representa la planificación de un turno de producción:
 - Las orders asignadas a una misma línea deben secuenciarse.
 - Algunas orders pueden quedar pendientes para el siguiente turno.
 
-CAMBIOS PRINCIPALES DE ESTA VERSIÓN
------------------------------------
-1. Se permite definir varias configuraciones dentro de una misma ejecución.
-2. Cada configuración contiene todos los parámetros modificables del experimento.
-3. El Excel no guarda el código numérico interno de Gurobi.
-4. El Excel guarda un estado simplificado:
-      - Solución óptima
-      - Solución factible
-      - Sin solución factible
-5. El output de texto guarda el motivo de parada con más detalle.
-6. El Excel incorpora una columna resultado_final coloreada automáticamente.
-7. Puede activarse o desactivarse la opción de emparejar instancias entre
-   configuraciones mediante MATCH_INSTANCES_BETWEEN_CONFIGS.
-
 ESTRUCTURA DEL CÓDIGO
 ---------------------
 1. Configuración general del experimento.
