@@ -16,20 +16,6 @@ El problema representa la planificación de un turno de producción:
 - Las orders asignadas a una misma línea deben secuenciarse.
 - Algunas orders pueden quedar pendientes para el siguiente turno.
 
-CAMBIOS PRINCIPALES DE ESTA VERSIÓN
------------------------------------
-1. Se permite definir varias configuraciones dentro de una misma ejecución.
-2. Cada configuración contiene todos los parámetros modificables del experimento.
-3. El Excel no guarda el código numérico interno de Gurobi.
-4. El Excel guarda un estado simplificado:
-      - Solución óptima
-      - Solución factible
-      - Sin solución factible
-5. El output de texto guarda el motivo de parada con más detalle.
-6. El Excel incorpora una columna resultado_final coloreada automáticamente.
-7. Puede activarse o desactivarse la opción de emparejar instancias entre
-   configuraciones mediante MATCH_INSTANCES_BETWEEN_CONFIGS.
-
 ESTRUCTURA DEL CÓDIGO
 ---------------------
 1. Configuración general del experimento.
@@ -62,7 +48,7 @@ from openpyxl.styles import Font, PatternFill, Alignment
 # configuraciones del experimento. La idea es que todos los parámetros que se
 # quieran cambiar estén aquí arriba, sin tener que tocar la formulación.
 
-CARPETA_RESULTADOS = "resultados_experimento_industrial"
+CARPETA_RESULTADOS = "resultados"
 CARPETA_INPUTS = os.path.join(CARPETA_RESULTADOS, "inputs")
 CARPETA_OUTPUTS = os.path.join(CARPETA_RESULTADOS, "outputs")
 EXCEL_RESUMEN = os.path.join(CARPETA_RESULTADOS, "resumen_resultados.xlsx")
@@ -88,13 +74,6 @@ PRINT_PROGRESS = True
 # ----------------------------------------------------------------
 # CONFIGURACIONES DEL EXPERIMENTO
 # ----------------------------------------------------------------
-# Cada diccionario representa un bloque de instancias con unos parámetros.
-# Para hacer 50 instancias con 75 orders, 50 con 200 y 50 con 300, basta con
-# crear tres configuraciones cambiando NUM_ORDERS y num_instancias.
-#
-# No se añade una columna de nombre de configuración al Excel: cada fila ya
-# contiene los valores de los parámetros usados, por lo que se puede filtrar
-# directamente por num_orders, num_lines, prob_coste_cero, etc.
 
 CONFIGURACIONES = [
     {
