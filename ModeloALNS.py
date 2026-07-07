@@ -50,10 +50,10 @@ from openpyxl.styles import Font, PatternFill, Alignment
 # 1. CONFIGURACIÓN GENERAL DEL EXPERIMENTO
 # ============================================================
 
-CARPETA_RESULTADOS = "resultados_tuning_adaptativo"
-CARPETA_INPUTS = os.path.join(CARPETA_RESULTADOS, "inputsAdaptar")
-CARPETA_OUTPUTS = os.path.join(CARPETA_RESULTADOS, "outputsAdaptar")
-EXCEL_RESUMEN = os.path.join(CARPETA_RESULTADOS, "resultados_tuning_adaptativo.xlsx")
+CARPETA_RESULTADOS = "resultados"
+CARPETA_INPUTS = os.path.join(CARPETA_RESULTADOS, "inputs")
+CARPETA_OUTPUTS = os.path.join(CARPETA_RESULTADOS, "outputs")
+EXCEL_RESUMEN = os.path.join(CARPETA_RESULTADOS, "resultados.xlsx")
 
 USAR_SEMILLA =  True
 SEED = 789
@@ -66,7 +66,7 @@ PRINT_PROGRESS = True
 
 CONFIGURACIONES = [
    {
-        "nombre": "100_orders_adaptativo",
+        "nombre": "100_orders",
         "num_instancias": 5,
         "NUM_LINES": 4,
         "NUM_ORDERS": 100,
@@ -87,7 +87,7 @@ CONFIGURACIONES = [
         "ALNS_PORCENTAJE_REMOVAL": 0.10,
     },
     {
-        "nombre": "120_orders_adaptativo",
+        "nombre": "120_orders",
         "num_instancias": 5,
         "NUM_LINES": 4,
         "NUM_ORDERS": 120,
@@ -108,7 +108,7 @@ CONFIGURACIONES = [
         "ALNS_PORCENTAJE_REMOVAL": 0.10,
     },
     {
-        "nombre": "140_orders_adaptativo",
+        "nombre": "140_orders",
         "num_instancias": 5,
         "NUM_LINES": 4,
         "NUM_ORDERS": 140,
