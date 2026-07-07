@@ -30,6 +30,7 @@ ESTRUCTURA DEL CÓDIGO
 10. Ejecución principal.
 """
 
+
 import os
 import random
 import math
