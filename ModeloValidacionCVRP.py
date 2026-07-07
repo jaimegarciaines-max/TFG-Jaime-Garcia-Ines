@@ -17,13 +17,6 @@ import math
 #   - eliminación de subtours mediante MTZ,
 #   - cálculo de costes por distancia euclídea.
 #
-# Diferencias respecto al modelo industrial original:
-#   - No se usan SETUP_IN ni SETUP_OUT.
-#   - El coste entre nodos se calcula como distancia euclídea.
-#   - Solo existe un depósito.
-#   - Todas las rutas/vehículos salen del mismo depósito y vuelven a él.
-#   - No se ejecuta ALNS.
-#
 # Instancia utilizada:
 #   E-n22-k4.txt, descargada de CVRPLIB/VRPLIB:
 #   CVRP con 21 clientes, 1 depósito, 4 vehículos/rutas y capacidad 6000.
@@ -51,7 +44,7 @@ NUM_VEHICULOS = 4
 
 
 # ------------------------------------------------------------
-# LECTURA DE INSTANCIA CVRPLIB / VRPLIB
+# LECTURA DE INSTANCIA
 # ------------------------------------------------------------
 
 def leer_cvrplib(nombre_fichero):
